@@ -9,4 +9,5 @@ with open("./data/rsvp_agent_log.dat", "r+")as f:
         if match is None:
             pass
         else:
-            print(str(i[0:14]) +  " -- "  + str(i[45:]))
+            print(re.sub(r'WARNING:\S+:', '__', i))
+            #print(str(i[0:14]) +  " -- "  + str(i[45:]))
